@@ -30,7 +30,7 @@ function LogIn(props) {
             .then(res => {
                 console.log(res.data)
                 localStorage.setItem('token', res.data.token)
-
+                props.history.push('/api/friends')
             })
             .catch(err => {
                 console.log(err)
@@ -40,6 +40,7 @@ function LogIn(props) {
 
     return (
         <form onSubmit={handleSubmit}>
+            <label>Log In</label>
             {error && <div className='error'>{error}</div>}
             <input 
                 type='text'
