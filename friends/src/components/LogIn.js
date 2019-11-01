@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 
+import api from '../utils/api';
+
 function LogIn(props) {
     // save users data in state
     const [data, setData] = useState({
         username: '',
         password: ''
     })
+    // save error data
+    const [error, setError] = useState()
+
     // control inputs 
     const handleChange = event => {
         setData({
@@ -18,11 +23,22 @@ function LogIn(props) {
         event.preventDefault();
 
         // sign in api post call here
+        api() 
+            .post('/api/login', data)
+            .then(res => {
+                console.log(res.data)
+                localStorage.setItem('token', res.data.token)
 
+            })
+            .catch(err => {
+                console.log(err)
+                setError(err.response.data.message)
+            })
     }
 
     return (
-        <form onSubmit={}>
+        <form onSubmit={handleSubmit}>
+            {error && <div className='error'>{error}</div>}
             <input 
                 type='text'
                 name='username'
