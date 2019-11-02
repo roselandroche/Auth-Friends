@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import './App.css';
 import LogIn from './components/LogIn';
 import { getToken } from './utils/api'
@@ -13,9 +13,9 @@ function App() {
     <div>
       <nav>
         <Link to='/'>Home</Link>
-        <Link to='/login'>Log In</Link>
-        <Link to='/friends'>Friends List</Link>
-        <Link to='/newfriend'>New Friend</Link>
+        {!signedIn && <Link to='/login'>Log In</Link>}
+        {signedIn && <Link to='/friends'>Friends List</Link>}
+        {signedIn && <Link to='/newfriend'>New Friend</Link>}
       </nav>
 
       <Route exact path='/login' component={LogIn} />
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
