@@ -4,6 +4,7 @@ import './App.css';
 import LogIn from './components/LogIn';
 import { getToken } from './utils/api'
 import FriendsList from './components/FriendsList';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   const signedIn = getToken();
@@ -16,7 +17,8 @@ function App() {
       </nav>
 
       <Route exact path='/api/login' component={LogIn} />
-      
+      <ProtectedRoute exact path='/api/friends' component={FriendsList} />
+
     </div>
   );
 }
