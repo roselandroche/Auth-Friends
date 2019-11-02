@@ -5,6 +5,7 @@ import LogIn from './components/LogIn';
 import { getToken } from './utils/api'
 import FriendsList from './components/FriendsList';
 import ProtectedRoute from './components/ProtectedRoute';
+import NewFriend from './components/NewFriend';
 
 function App() {
   const signedIn = getToken();
@@ -12,13 +13,14 @@ function App() {
     <div>
       <nav>
         <Link to='/'>Home</Link>
-        <Link to='/api/login'>Log In</Link>
-        <Link to='/api/friends'>Friends List</Link>
+        <Link to='/login'>Log In</Link>
+        <Link to='/friends'>Friends List</Link>
+        <Link to='/newfriend'>New Friend</Link>
       </nav>
 
-      <Route exact path='/api/login' component={LogIn} />
-      <ProtectedRoute exact path='/api/friends' component={FriendsList} />
-
+      <Route exact path='/login' component={LogIn} />
+      <ProtectedRoute exact path='/friends' component={FriendsList} />
+      <ProtectedRoute exact path='/newfriend' component={NewFriend} />
     </div>
   );
 }
