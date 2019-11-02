@@ -29,7 +29,7 @@ function LogIn(props) {
             .post('/api/login', data)
             .then(res => {
                 console.log(res.data)
-                localStorage.setItem('token', res.data.token)
+                localStorage.setItem('token', res.data.payload)
                 props.history.push('/api/friends')
             })
             .catch(err => {

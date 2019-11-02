@@ -8,7 +8,7 @@ function FriendsList(props) {
         api()
             .get('/api/friends')
             .then(res => {
-                console.log(res.data)
+                setFriends(res.data)
             })
             .catch(err => {
                 console.log(err)
@@ -16,7 +16,18 @@ function FriendsList(props) {
     }, [])
 
     return (
-        <div>Friends List</div>
+        <div>
+            <h3>Friends List</h3>
+            {friends.map((item) => {
+                return (
+                    <div className='friend'>
+                        <h5>{item.name}</h5>
+                        <h5>{item.age}</h5>
+                        <h5>{item.email}</h5>
+                    </div>
+                )
+            })}
+        </div>
     )
 }
 
