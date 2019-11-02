@@ -4,7 +4,7 @@ import './App.css';
 import LogIn from './components/LogIn';
 import { getToken } from './utils/api'
 import FriendsList from './components/FriendsList';
-import ProtectedRoute from './components/ProtectedRoute';
+import PrivateRoute from './components/PrivateRoute';
 import NewFriend from './components/NewFriend';
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
       </nav>
 
       <Route exact path='/login' component={LogIn} />
-      <ProtectedRoute exact path='/friends' component={FriendsList} />
-      <ProtectedRoute exact path='/newfriend' component={NewFriend} />
+      <PrivateRoute exact path='/friends' component={FriendsList} />
+      <PrivateRoute exact path='/newfriend' component={NewFriend} />
     </div>
   );
 }
