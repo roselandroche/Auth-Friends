@@ -5,7 +5,7 @@ function NewFriend(props) {
     const [newFriend, createNewFriend] = useState({
         id: Date.now(),
         name: '',
-        age: 1,
+        age: 21,
         email: '',
     })
 
