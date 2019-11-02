@@ -40,6 +40,7 @@ DONE
 * The login function should save the returned token to localStorage. You can setup `isLoading` state in your Login component, and show a spinner on your form or in your button while the login request is happening.
 
 * When the request returns, save the token to `localStorage`, then use the history object in your Login component to navigate your user to your FriendsList route
+DONE
 
 * Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
 DONE
