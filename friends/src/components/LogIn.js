@@ -10,8 +10,6 @@ function LogIn(props) {
     })
     // save error data
     const [error, setError] = useState()
-    // set up isLoading state
-    // const [loading, setLoading] = useState(false)
 
     // control inputs 
     const handleChange = event => {

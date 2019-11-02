@@ -12,7 +12,6 @@ function App() {
   return (
     <div>
       <nav>
-        <Link to='/'>Home</Link>
         {!signedIn && <Link to='/login'>Log In</Link>}
         {signedIn && <Link to='/friends'>Friends List</Link>}
         {signedIn && <Link to='/newfriend'>New Friend</Link>}

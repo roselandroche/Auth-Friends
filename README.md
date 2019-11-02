@@ -26,7 +26,7 @@ Topics:
   * **[GET]** to `/api/friends/123`: returns the friend with the id passed as part of the URL (123 in example).
   * **[POST]** to `/api/friends`: creates a friend and return the new list of friends. Pass the friend as the `body` of the request (the second argument passed to `axios.post`).
   DONE
-  
+
   * **[PUT]** to `/api/friends/:id`: updates the friend using the `id` passed as part of the URL. Send the an object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
   * **[DELETE]** to `/api/friends/123`: removes the friend using the `id` passed as part of the URL (123 in example).
 
@@ -34,8 +34,12 @@ Topics:
 
 DONE * Run `yarn` or `npm i` inside the root directory of this project to install dependencies.
 * Run `yarn start` or `npm start` to start the API server.
-DONE * Run `create-react-app friends` in a separate terminal window in the root directory of the project to create your starter application.
-DONE * `cd` into the _friends_ folder and type `yarn add axios react-router-dom` which will install the needed dependencies.
+DONE 
+
+* Run `create-react-app friends` in a separate terminal window in the root directory of the project to create your starter application.
+DONE 
+
+* `cd` into the _friends_ folder and type `yarn add axios react-router-dom` which will install the needed dependencies.
 
 ## Build the App!
 * Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
