@@ -18,9 +18,15 @@ Topics:
 * Take a look at the endpoints that our API has to offer in `server.js`.
 
   * **[POST]** * to `/api/login`: returns a token to be added to the header of all other requests. Pass in the following credentials as the `body` of the request: `{ username: 'Lambda School', password: 'i<3Lambd4' }`
+  DONE
+
   * **[GET]** to `/api/friends`: returns the list of friends.
+  DONE
+
   * **[GET]** to `/api/friends/123`: returns the friend with the id passed as part of the URL (123 in example).
   * **[POST]** to `/api/friends`: creates a friend and return the new list of friends. Pass the friend as the `body` of the request (the second argument passed to `axios.post`).
+  DONE
+
   * **[PUT]** to `/api/friends/:id`: updates the friend using the `id` passed as part of the URL. Send the an object with the updated information as the `body` of the request (the second argument passed to `axios.put`).
   * **[DELETE]** to `/api/friends/123`: removes the friend using the `id` passed as part of the URL (123 in example).
 
@@ -28,20 +34,38 @@ Topics:
 
 DONE * Run `yarn` or `npm i` inside the root directory of this project to install dependencies.
 * Run `yarn start` or `npm start` to start the API server.
+DONE 
+
 * Run `create-react-app friends` in a separate terminal window in the root directory of the project to create your starter application.
+DONE 
+
 * `cd` into the _friends_ folder and type `yarn add axios react-router-dom` which will install the needed dependencies.
 
 ## Build the App!
 * Add a route for a login page and build out a simple login form with username and password inputs and a submit button (design this however you would like).
+DONE
+
 * The login function should save the returned token to localStorage. You can setup `isLoading` state in your Login component, and show a spinner on your form or in your button while the login request is happening.
+
 * When the request returns, save the token to `localStorage`, then use the history object in your Login component to navigate your user to your FriendsList route
+DONE
+
 * Create a `<PrivateRoute />` component to protect your other routes. It should check localStorage for a token, and redirect the user to your login route if there is not a token.
+DONE
+
 * Create a protected route for your friends list. Remember, if the user isn't logged in, navigating to this protected route will redirect them to the login page.
+DONE
+
 * In your FriendsList component, rendered with `<ProtectedRoute />`, you will create a list of your friends that you get from the API.
+DONE
 
 **Adding New Friends**
 * Create a form to collects data for a new friend.
+DONE
+
 * Make a POST request to add a friend to the database
+DONE
+
 * Each `friend` item that is in the `friends` array should have the following format:
 
 ```js
@@ -52,6 +76,7 @@ DONE * Run `yarn` or `npm i` inside the root directory of this project to instal
   email: 'joe@lambdaschool.com',
 }
 ```
+DONE
 
 * If you'd like, you can create multiple "view" components for your routes. You could have a component who's sole purpose is to render the login form; one for a form for updating a user; another component who's sole purpose is for creating users; and then another component who's sole purpose is to delete a user.
 * It really is up to you how you build this project. I suggest writing down the flow you want to follow, and then writing down each individual piece you need for each step in the flow so that this process doesn't feel as overwhelming.
